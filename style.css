@@ -1,0 +1,432 @@
+/* ================= RESET GLOBAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ================= BANNER ================= */
+
+.banner {
+    background-color: #8b0000;
+    border-bottom: 5px solid #cc0000;
+    padding: 15px 30px;
+}
+
+.banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+
+/* ================= MARCA / LOGO ================= */
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Círculo onde fica o logo */
+.logo-box {
+    width: 90px;
+    height: 90px;
+
+    background-color: #ffffff;
+
+    border-radius: 50%;
+    border: 3px solid #ffcc00;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    flex-shrink: 0;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Imagem do logo */
+.logo-img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+}
+
+
+/* ================= NOME DA EMPRESA ================= */
+
+.title-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.sigla {
+    font-size: 2.8rem;
+    letter-spacing: 4px;
+    color: #ffffff;
+    line-height: 1;
+}
+
+.nome-extenso {
+    font-size: 1.1rem;
+    color: #ffcccc;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+/* ================= MENU DO BANNER ================= */
+
+.nav-banner {
+    display: flex;
+    align-items: center;
+}
+
+.nav-banner a {
+    color: #ffffff;
+    text-decoration: none;
+
+    margin-left: 25px;
+
+    font-weight: bold;
+    font-size: 1.1rem;
+
+    transition: 0.3s;
+}
+
+.nav-banner a:hover {
+    color: #ffcc00;
+}
+
+
+/* ================= CORPO PRINCIPAL ================= */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    max-width: 1300px;
+
+    margin: 60px auto;
+    padding: 0 30px;
+
+    flex-grow: 1;
+
+    gap: 50px;
+}
+
+
+/* ================= COLUNA ESQUERDA ================= */
+
+.bio-section {
+    width: 50%;
+
+    background: rgba(0, 0, 0, 0.4);
+
+    padding: 35px;
+
+    border-radius: 15px;
+    border-left: 5px solid #cc0000;
+}
+
+.titulo-bio {
+    color: #ff3333;
+
+    font-size: 2.2rem;
+
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+}
+
+.bio-section p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+
+    color: #e0e0e0;
+}
+
+.bio-section strong {
+    color: #ffffff;
+}
+
+
+/* ================= COLUNA DIREITA ================= */
+
+.links-section {
+    width: 45%;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* ================= CAIXA VERMELHA ================= */
+
+.caixa-principal-links {
+    background-color: #cc0000;
+
+    padding: 30px;
+
+    border-radius: 40px;
+
+    width: 100%;
+    max-width: 420px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+
+    border: 4px solid #990000;
+
+    text-align: center;
+}
+
+.titulo-links {
+    font-size: 2.5rem;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+
+    color: #ffffff;
+}
+
+
+/* ================= BOTÃO ================= */
+
+.btn-toggle {
+    background-color: #ffffff;
+    color: #cc0000;
+
+    border: none;
+
+    padding: 15px 30px;
+
+    font-size: 1.2rem;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    transition: 0.3s;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+    width: 100%;
+}
+
+.btn-toggle:hover {
+    background-color: #ffcccc;
+
+    transform: scale(1.05);
+}
+
+
+/* ================= CONTAINER DOS LINKS ================= */
+
+.links-container {
+    margin-top: 25px;
+
+    transition:
+        max-height 0.6s ease-in-out,
+        opacity 0.6s ease-in-out,
+        margin 0.6s ease-in-out;
+
+    overflow: hidden;
+
+    max-height: 600px;
+
+    opacity: 1;
+}
+
+
+/* Classe adicionada/removida pelo JavaScript */
+.escondido {
+    max-height: 0;
+
+    opacity: 0;
+
+    margin-top: 0;
+}
+
+
+/* ================= LISTA DE LINKS ================= */
+
+.lista-links {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.lista-links a {
+    display: flex;
+    align-items: center;
+
+    background-color: transparent;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    padding: 12px 20px;
+
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+
+    transition: 0.3s;
+}
+
+.lista-links a:hover {
+    background-color: #ffffff;
+
+    color: #cc0000;
+}
+
+
+/* Bolinhas antes dos links */
+.lista-links a::before {
+    content: '';
+
+    display: inline-block;
+
+    width: 14px;
+    height: 14px;
+
+    border: 2px solid #ffffff;
+
+    border-radius: 50%;
+
+    margin-right: 15px;
+
+    transition: 0.3s;
+}
+
+.lista-links a:hover::before {
+    border-color: #cc0000;
+
+    background-color: #cc0000;
+}
+
+
+/* ================= RESPONSIVIDADE ================= */
+
+@media (max-width: 900px) {
+
+    .banner-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-banner {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-banner a {
+        margin-left: 0;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .bio-section {
+        width: 100%;
+    }
+
+    .links-section {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .caixa-principal-links {
+        max-width: 100%;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .banner {
+        padding: 15px;
+    }
+
+    .marca {
+        gap: 12px;
+    }
+
+    .logo-box {
+        width: 70px;
+        height: 70px;
+    }
+
+    .sigla {
+        font-size: 2rem;
+    }
+
+    .nome-extenso {
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+    }
+
+    .container {
+        margin: 30px auto;
+        padding: 0 15px;
+    }
+
+    .bio-section {
+        padding: 25px;
+    }
+
+    .titulo-bio {
+        font-size: 1.8rem;
+    }
+
+    .bio-section p {
+        font-size: 1rem;
+    }
+
+    .caixa-principal-links {
+        padding: 25px;
+        border-radius: 30px;
+    }
+
+    .titulo-links {
+        font-size: 2rem;
+    }
+}
