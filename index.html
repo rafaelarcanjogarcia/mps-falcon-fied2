@@ -1,11 +1,139 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MPS Falcon field</title>
+
+    <title>MPS Falconfield</title>
+
+    <!-- Arquivo CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <!-- ================= BANNER TOPO ================= -->
+    <header class="banner">
+
+        <div class="banner-content">
+
+            <!-- ESQUERDA: LOGO + NOME -->
+            <div class="marca">
+
+                <div class="logo-box">
+                    <img
+                        src="img/logo.jpeg"
+                        alt="Logo MPS Falconfield"
+                        class="logo-img"
+                    >
+                </div>
+
+                <div class="title-box">
+                    <h1 class="sigla">MPS</h1>
+                    <h2 class="nome-extenso">FALCONFIELD</h2>
+                </div>
+
+            </div>
+
+            <!-- DIREITA: MENU -->
+            <nav class="nav-banner">
+                <a href="#">Início</a>
+                <a href="#">Sobre Nós</a>
+                <a href="#">Nossos Cursos</a>
+                <a href="#">Contato</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+    <main class="container">
+
+        <!-- COLUNA ESQUERDA: QUEM SOMOS -->
+        <section class="bio-section">
+
+            <h3 class="titulo-bio">Quem Somos</h3>
+
+            <p>
+                A <strong>MPS Falconfield</strong> atua na área de formação
+                e capacitação profissional, com foco em Bombeiro Civil,
+                Primeiros Socorros, Brigada de Incêndio e Segurança do Trabalho.
+            </p>
+
+            <p>
+                Oferece treinamentos e serviços voltados à prevenção de acidentes,
+                combate a incêndios e proteção de pessoas e empresas, além de
+                trabalhar com venda e recarga de extintores.
+            </p>
+
+        </section>
+
+
+        <!-- COLUNA DIREITA: LINKS -->
+        <section class="links-section">
+
+            <div class="caixa-principal-links">
+
+                <h2 class="titulo-links">LINKS</h2>
+
+                <!-- BOTÃO -->
+                <button
+                    id="btn-abrir-links"
+                    class="btn-toggle"
+                >
+                    Ver Opções
+                </button>
+
+
+                <!-- LINKS ESCONDIDOS -->
+                <div
+                    id="caixa-links"
+                    class="links-container escondido"
+                >
+
+                    <ul class="lista-links">
+
+                        <li>
+                            <a href="#">
+                                Cursos de Formação
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Brigada de Incêndio
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Venda de Extintores
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                WhatsApp / Contato
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Arquivo JavaScript -->
+    <script src="script.js"></script>
+
 </body>
+
 </html>
