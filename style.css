@@ -7,10 +7,45 @@
 
 body {
     background-color: #121212;
+    background-image: url('bg-bombeiro.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: #ffffff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(18, 18, 18, 0.88) 0%, rgba(80, 25, 25, 0.80) 50%, rgba(18, 18, 18, 0.88) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+/* ================= LOGO CANTO SUPERIOR ESQUERDO ================= */
+
+.logo-corner {
+    display: inline-block;
+    background-color: transparent;
+    border-radius: 15px;
+    padding: 0;
+    box-shadow: none;
+}
+
+.logo-corner-img {
+    width: 75px;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
 
@@ -20,6 +55,8 @@ body {
     background-color: #8b0000;
     border-bottom: 5px solid #cc0000;
     padding: 15px 30px;
+    position: relative;
+    z-index: 10;
 }
 
 .banner-content {
@@ -37,37 +74,6 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
-}
-
-/* Círculo onde fica o logo */
-.logo-box {
-    width: 90px;
-    height: 90px;
-
-    background-color: #ffffff;
-
-    border-radius: 50%;
-    border: 3px solid #ffcc00;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    overflow: hidden;
-    flex-shrink: 0;
-
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-}
-
-/* Imagem do logo */
-.logo-img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center;
-
-    display: block;
 }
 
 
@@ -98,6 +104,7 @@ body {
 .nav-banner {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .nav-banner a {
@@ -114,6 +121,80 @@ body {
 
 .nav-banner a:hover {
     color: #ffcc00;
+}
+
+.nav-banner .nav-instagram {
+    background: linear-gradient(135deg, #833AB4, #FD1D1D, #FCAF45);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-banner .nav-instagram:hover {
+    filter: brightness(1.2);
+    color: #ffcc00;
+    -webkit-text-fill-color: #ffcc00;
+}
+
+
+/* ================= DROPDOWN CONTATO ================= */
+
+.dropdown-contato {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-contato {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #cc0000;
+    border: 2px solid #990000;
+    border-radius: 10px;
+    margin-top: 10px;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    overflow: hidden;
+    
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-contato.escondido-dropdown {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.opcao-contato {
+    display: block;
+    padding: 12px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: 0.3s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.opcao-contato:last-child {
+    border-bottom: none;
+}
+
+.opcao-contato:hover {
+    background-color: #990000;
+}
+
+.opcao-contato.email:hover {
+    background-color: #0066cc;
+}
+
+.opcao-contato.whatsapp:hover {
+    background-color: #25D366;
 }
 
 
@@ -133,6 +214,9 @@ body {
     flex-grow: 1;
 
     gap: 50px;
+
+    position: relative;
+    z-index: 10;
 }
 
 
@@ -266,6 +350,7 @@ body {
 
 
 /* Classe adicionada/removida pelo JavaScript */
+
 .escondido {
     max-height: 0;
 
@@ -315,6 +400,7 @@ body {
 
 
 /* Bolinhas antes dos links */
+
 .lista-canais a::before {
     content: '';
 
@@ -336,6 +422,94 @@ body {
     border-color: #cc0000;
 
     background-color: #cc0000;
+}
+
+
+/* ================= EMAIL ================= */
+
+.lista-canais a.email-link {
+    background-color: #0066cc;
+
+    border-color: #0066cc;
+
+    color: #ffffff;
+}
+
+.lista-canais a.email-link:hover {
+    background-color: #0052a3;
+
+    border-color: #0052a3;
+
+    color: #ffffff;
+}
+
+.lista-canais a.email-link::before {
+    border-color: #ffffff;
+
+    background-color: transparent;
+}
+
+.lista-canais a.email-link:hover::before {
+    border-color: #ffffff;
+
+    background-color: #ffffff;
+}
+
+
+/* ================= WHATSAPP ================= */
+
+.lista-canais a.whatsapp-link {
+    background-color: #25D366;
+
+    border-color: #25D366;
+
+    color: #ffffff;
+}
+
+.lista-canais a.whatsapp-link:hover {
+    background-color: #128C7E;
+
+    border-color: #128C7E;
+
+    color: #ffffff;
+}
+
+.lista-canais a.whatsapp-link::before {
+    border-color: #ffffff;
+
+    background-color: transparent;
+}
+
+.lista-canais a.whatsapp-link:hover::before {
+    border-color: #ffffff;
+
+    background-color: #ffffff;
+}
+
+
+/* ================= INSTAGRAM ================= */
+
+.lista-canais a.instagram-link {
+    background: linear-gradient(135deg, #833AB4 0%, #FD1D1D 50%, #FCAF45 100%);
+    border-color: transparent;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.lista-canais a.instagram-link:hover {
+    background: linear-gradient(135deg, #6D2E8E 0%, #E60000 50%, #F08030 100%);
+    filter: brightness(1.15);
+    color: #ffffff;
+}
+
+.lista-canais a.instagram-link::before {
+    border-color: #ffffff;
+    background-color: transparent;
+}
+
+.lista-canais a.instagram-link:hover::before {
+    border-color: #ffffff;
+    background-color: #ffffff;
 }
 
 
@@ -379,6 +553,10 @@ body {
 
 
 @media (max-width: 550px) {
+
+    .logo-corner-img {
+        width: 55px;
+    }
 
     .banner {
         padding: 15px;
