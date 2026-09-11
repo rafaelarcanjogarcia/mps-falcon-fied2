@@ -1421,3 +1421,77 @@ body {
         height: 18px;
     }
 }
+
+
+/* ================= RODAPÉ DE CRÉDITOS ================= */
+
+.footer-creditos {
+    width: 100%;
+    background: rgba(18, 18, 18, 0.85);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 15px;
+    margin-top: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    z-index: 10;
+}
+
+.titulo-creditos {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.links-creditos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.credito-instagram {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+}
+
+.credito-instagram svg {
+    fill: #FD1D1D;
+    transition: fill 0.3s ease;
+}
+
+.credito-instagram span {
+    background: linear-gradient(135deg, #833AB4 0%, #FD1D1D 50%, #FCAF45 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.credito-instagram:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #FD1D1D;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(253, 29, 29, 0.25);
+}
+
+.credito-instagram:hover svg {
+    fill: #FCAF45;
+}
+
