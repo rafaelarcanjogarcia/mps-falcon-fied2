@@ -1495,3 +1495,15 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(253, 29, 29, 0.25);
 }
+
+.credito-instagram:hover svg {
+    fill: #FCAF45;
+}
+
+.copyright-texto {
+    font-size: 0.85rem;
+    color: #888888;
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+}
+
