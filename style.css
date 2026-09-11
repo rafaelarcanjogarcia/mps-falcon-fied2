@@ -1144,6 +1144,11 @@ body {
     object-fit: cover;
 }
 
+.card-img-placeholder:has(img) {
+    border-bottom: 2px solid rgba(204, 0, 0, 0.4);
+    background: transparent;
+}
+
 
 .card-servico:hover .card-img-placeholder {
     background: rgba(255, 255, 255, 0.08);
@@ -1490,8 +1495,3 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(253, 29, 29, 0.25);
 }
-
-.credito-instagram:hover svg {
-    fill: #FCAF45;
-}
-
